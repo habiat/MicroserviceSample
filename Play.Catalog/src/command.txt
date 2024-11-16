@@ -1,0 +1,19 @@
+
+dotnet add package Microsoft.Extensions.Configuration.Binder -v 5.0.0
+dotnet add package MongoDB.Driver -v 2.26.0
+
+docker ps
+docker-compose run
+docker-compose up
+
+dotnet add package Play.Common
+dotnet add package Microsoft.Extensions.Http.Polly -v 5.0.1
+
+
+
+dotnet new classlib -n Play.Catalog.Contracts --framework  net5.0
+dotnet add  reference ..\Play.Catalog.Contracts\Play.Catalog.Contracts.csproj
+dotnet add package MassTransit.AspNetCore -v 7.1.3
+dotnet add package MassTransit.RabbitMQ -v 7.1.3
+
+dotnet pack -p:PackageVersion=1.0.1 -o ..\.\..\packages\
